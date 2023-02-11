@@ -3,7 +3,6 @@ const express=require('express')
 const dotenv=require('dotenv')
 const cors=require('cors')
 
-
 dotenv.config()
 const app=express()
 
@@ -17,7 +16,6 @@ const Postrouter=require('./Router/Postrouter')
 app.use('/register',Registerrouter)
 app.use('/',Authmodule.authenticate)
 app.use('/post',Postrouter)
-
 
 const server=app.listen(process.env.PORT,console.log('server started'))
 
